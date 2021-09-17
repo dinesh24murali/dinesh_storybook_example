@@ -1,10 +1,10 @@
 {
   "name": "dinesh_storybook_example",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Starter template to get up and running quickly with React and Storybook",
   "author": "Dinesh",
   "bugs": {
-    "url": "https://github.com/chromaui/intro-storybook-react-template/issues"
+    "url": "https://github.com/dinesh24murali/dinesh_storybook_example/issues"
   },
   "main": "dist/index.js",
   "private": false,
@@ -14,7 +14,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "URL_OF_YOUR_REPOSITORY"
+    "url": "https://github.com/dinesh24murali/dinesh_storybook_example"
   },
   "license": "MIT",
   "peerDependencies": {
@@ -34,6 +34,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
+    "clean": "rimraf dist",
+    "compile": "npm run clean && cross-env NODE_ENV=production babel src/stories --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,stories.js,stories.jsx,__snapshots__",
     "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
